@@ -6,7 +6,7 @@
 /*   By: lloginov <lloginov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 17:50:25 by lloginov          #+#    #+#             */
-/*   Updated: 2024/10/16 18:11:35 by lloginov         ###   ########.fr       */
+/*   Updated: 2024/10/18 19:01:48 by lloginov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ typedef struct s_data
 	void		*win_ptr; // MLX window pointer
 	void		*textures; // MLX image pointers (on the stack)
 	char 		**map;
+	char 		**map2;
 	int			ligne_len;
 	int			nb_ligne;
 	int         count;
@@ -29,6 +30,10 @@ typedef struct s_data
 	int			exit_count;
 	int			fruit_count;
 	int			k;
+	int			Player_y_pos;
+	int			Player_x_pos;
+
+
 }	t_data;
 
 
@@ -53,6 +58,11 @@ void		pars(t_data *data);
 //utilse
 
 char		*ft_strdup(char *s1, char *s2, t_data *data);
+
+/*
+X = horizontal
+Y = vertical
+*/
 
 
 #endif

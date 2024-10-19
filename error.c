@@ -6,7 +6,7 @@
 /*   By: lloginov <lloginov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 18:05:29 by lloginov          #+#    #+#             */
-/*   Updated: 2024/10/16 18:18:55 by lloginov         ###   ########.fr       */
+/*   Updated: 2024/10/18 10:45:42 by lloginov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,12 @@ void	free_exit(t_data *data, char *str)
 	ft_printf("%s\n",str);
 	while(data->map[j])
 	{
-		free(data->map);
+		while(data->map[j][i])
+		{
+			free(data->map);
+			i++;
+		}
+		j++;
 	}
 
 	exit(1);	

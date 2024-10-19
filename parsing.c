@@ -6,7 +6,7 @@
 /*   By: lloginov <lloginov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:24:32 by lloginov          #+#    #+#             */
-/*   Updated: 2024/10/16 18:18:55 by lloginov         ###   ########.fr       */
+/*   Updated: 2024/10/18 16:51:31 by lloginov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void map_parsing(char *av1, t_data *data)
 
 	fd = open(av1, O_RDONLY);
 	if (fd < 0)
-		free_exit(&data, "Error : invalid fd");
+		free_exit(&data, "Error : invalid fd\n");
 	get_map_size(av1, fd, data);
 	data->map = malloc(sizeof(char *) * (data->nb_ligne));
 	map_dup(av1, fd, &data);
